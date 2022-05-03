@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="text-center text-3xl underline mt-20">
+        Sign Up
+    </div>
+    <div class="text-md ">
+        Authenticate your number with Otp
+        <br>
+    </div>
+
+    <form action="datasaver" method="POST" class="text-center mt-10">
+        {% csrf_token %}
+        <label class="text-lg">Enter Phone Number : </label>
+        <input type="phonenumber" placeholder="Enter mobile number" class="border-2 border-black" name="phoneNumber">
+        <br>
+        <button type="submit" name="numberSubmit" class="mt-5 hover:border-2 border-black">Verify</button>
+    </form>
+</body>
+</html>
